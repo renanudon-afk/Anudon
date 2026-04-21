@@ -20,9 +20,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Force HTTPS in production
+        // Force HTTPS in production (Railway uses SSL termination)
         if (env('APP_ENV') === 'production') {
             URL::forceScheme('https');
+            \Illuminate\Support\Facades\Request::setTrustedProxies(
+                ['*'],
+                \Illuminate\Http\Request::HEADER_X_FORWARDED_ALL
+            );
         }
 
         view()->composer('welcome', function($view){
