@@ -320,30 +320,14 @@ return [
             'url' => 'admin/blog',
             'can' => 'manage-blog',
         ],
-        [
-            'text' => 'Menu',
-            'url' => '/menu_pagination',
-            'icon' => 'far fa-fw fa-file',
-            'label_color' => 'success',
-        ],
-         [
-            'text' => 'Menu Category',
-            'url' => '/menu_categ_pagination',
-            'icon' => 'far fa-fw fa-file',
-            'label_color' => 'success',
-        ],
+
                  [
             'text' => 'Student Information',
             'url' => '/students_pagination',
             'icon' => 'far fa-fw fa-file',
             'label_color' => 'success',
         ],
-        [
-            'text' => 'Product Management',
-            'url' => '/product_pagination',
-            'icon' => 'far fa-fw fa-file',
-            'label_color' => 'success',
-        ],
+
 
         ['header' => 'account_settings'],
         [
